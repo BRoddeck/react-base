@@ -1,38 +1,18 @@
-import React from 'react';
-import {
-      BrowserRouter as Router,
-      Route,
-      Redirect,
-      Switch
-    } from 'react-router-dom';
+import 'LESS/BaseStyle.less';
 
-import 'APP/BaseStyle.less';
-import { initServiceWorker } from 'UTIL/serviceWorker.js';
+import Content from "./Content.jsx";
+import Header from "./Header.jsx";
+import Menu from "./Menu.jsx";
+import React from 'react';
 
 export default class App extends React.Component {
-    constructor(props) {
-        super();
-
-        this.state = { }
-    }
-
-    componentWillMount() {}
-    componentDidMount() {
-        initServiceWorker();
-    }
-    componentWillUnmount() {}
-
-    componentWillReceiveProps() {}
-    shouldComponentUpdate() {}
-    componentWillUpdate() {}
-    componentDidUpdate() {}
-
     render() {
-        return (<Router>
-            <Switch>
-                <Route path="/" exact render={() => <div></div>} />
-                <Redirect to="/" />
-            </Switch>
-        </Router>);
+        return (
+            <div className="container grid-container">
+                <Header />
+                <Menu />
+                <Content />
+            </div>
+        );
     }
 }

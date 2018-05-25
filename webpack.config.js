@@ -111,6 +111,7 @@ module.exports = {
             UTIL:       path.resolve('./client/app/utils'),
             VIEW:       path.resolve('./client/app/views'),
             STORE:      path.resolve('./client/app/store'),
+            LESS:       path.resolve('./client/app/less'),
 
             /* set path to runtime for ServiceWorkerWebpackPlugin as variable to allow to mock it in tests */
             SW:         path.resolve('./node_modules/serviceworker-webpack-plugin/lib')

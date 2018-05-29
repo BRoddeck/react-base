@@ -12,6 +12,7 @@ class MemberTable extends React.Component {
                 <table>
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Name</th>
                             <th>Vorname</th>
                             <th>Geburtsdatum</th>
@@ -26,4 +27,3 @@ class MemberTable extends React.Component {
 };
 
 export default (MemberTable);
-

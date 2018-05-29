@@ -17,8 +17,15 @@ const defaultStore = {
 			fname: 'Fred',
 			birthday: '21.12.1994',
 			email: 'duckscher94@gmail.de',
+		},
+		3: {
+			id: 3,
+			name: 'Mergel',
+			fname: 'Antonia',
+			birthday: '03.05.1983',
+			email: 'blume0305@gmx.de',
 		}
-	}
+  },
  };
 
 

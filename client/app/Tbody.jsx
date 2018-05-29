@@ -13,8 +13,12 @@ class Tbody extends React.Component {
             <tbody>
                 {arrMembers.map(member => {
                     return (
-                        <tr key={member.id}>
-                            <td>member.name</td>
+                        <tr id={member.id} key={member.id}>
+                            <td>{member.id}</td>
+                            <td>{member.name}</td>
+                            <td>{member.fname}</td>
+                            <td>{member.birthday}</td>
+                            <td>{member.email}</td>
                         </tr>
                     );
                 })}
@@ -25,9 +29,8 @@ class Tbody extends React.Component {
 
 const mapStoreToProps = (store, ownProps) => {
     return {
-      members: ownProps.members.map(memberId => store.members[memberId])
+        members: store.members
     };
   };
 
 export default connect(mapStoreToProps) (Tbody);
-
